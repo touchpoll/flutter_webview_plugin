@@ -61,7 +61,6 @@ public class BrowserClient extends WebViewClient {
 
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
         // returning true causes the current WebView to abort loading the URL,
@@ -89,7 +88,6 @@ public class BrowserClient extends WebViewClient {
         return isInvalid;
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
         super.onReceivedHttpError(view, request, errorResponse);
