@@ -99,7 +99,7 @@ class WebviewManager {
     }
 
     private Uri[] getSelectedFiles(Intent data) {
-        // we have one files selected
+        // we have one files selectedfvflutter_webview_plugin
         if (data.getData() != null) {
             String dataString = data.getDataString();
             if (dataString != null) {
@@ -393,6 +393,9 @@ class WebviewManager {
         webView.getSettings().setSupportMultipleWindows(supportMultipleWindows);
 
         webView.getSettings().setAppCacheEnabled(appCacheEnabled);
+
+        webView.getSettings().setAllowFileAccess(appCacheEnabled);
+        webView.getSettings().setAllowFileAccessFromFileURLs(appCacheEnabled);
 
         webView.getSettings().setAllowFileAccessFromFileURLs(allowFileURLs);
         webView.getSettings().setAllowUniversalAccessFromFileURLs(allowFileURLs);
