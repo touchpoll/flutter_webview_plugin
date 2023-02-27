@@ -394,9 +394,6 @@ class WebviewManager {
 
         webView.getSettings().setAppCacheEnabled(appCacheEnabled);
 
-        webView.getSettings().setAllowFileAccess(true);
-        webView.getSettings().setAllowFileAccessFromFileURLs(true);
-
         webView.getSettings().setAllowFileAccessFromFileURLs(allowFileURLs);
         webView.getSettings().setAllowUniversalAccessFromFileURLs(allowFileURLs);
 
